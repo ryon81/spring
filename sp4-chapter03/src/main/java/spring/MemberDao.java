@@ -1,6 +1,5 @@
 package spring;
 
-import java.lang.reflect.Member;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,6 +9,11 @@ public class MemberDao
 	private static long nextId = 0;
 	
 	private Map<String, Member> map = new HashMap<>();
+	
+	public Collection<Member> selectAll()
+	{
+		return map.values();
+	}
 	
 	public Member selectByEmail(String email)
 	{
@@ -22,14 +26,14 @@ public class MemberDao
 		map.put(member.getEmail(),member);
 	}
 	
-	public void update(spring.member member)
+	public void update(Member member)
 	{
 		map.put(member.getEmail(), member);
 	}
 	
-	public Collection<Member> selectAll()
+	/*public Collection<Member> selectAll()
 	{
 		return map.values();
-	}
+	}*/
 
 }

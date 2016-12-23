@@ -2,7 +2,7 @@ package spring;
 
 import java.util.Date;
 
-public class member 
+public class Member 
 {
 	private Long id;
 	private String email;
@@ -10,7 +10,7 @@ public class member
 	private String name;
 	private Date registerDate;
 	
-	public member(String email, String password, String name, Date registerDate)
+	public Member(String email, String password, String name, Date registerDate)
 	{
 		this.email = email;
 		this.password = password;
