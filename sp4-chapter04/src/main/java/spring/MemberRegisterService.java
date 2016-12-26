@@ -2,14 +2,23 @@ package spring;
 
 import java.util.Date;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class MemberRegisterService 
 {
 	private MemberDao memberDao;
-		
+	
+	@Autowired
 	public MemberRegisterService(MemberDao memberdao)
 	{
 		this.memberDao = memberdao;
 	}
+	
+	public MemberRegisterService()
+	{
+		
+	}
+	
 	
 	public void regist(RegisterRequest req)
 	{
@@ -22,5 +31,6 @@ public class MemberRegisterService
 		Member newMember = new Member(req.getEmail(),req.getPassword(),req.getName(), new Date());
 		memberDao.insert(newMember);
 	}
+		
 
 }
