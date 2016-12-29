@@ -18,8 +18,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<!-- Spring -->
+ 
+		<!-- Spring --> 
 		<spring-framework.version>3.2.3.RELEASE</spring-framework.version>
+
 
 		<!-- Hibernate / JPA -->
 		<hibernate.version>4.2.1.Final</hibernate.version>
@@ -34,6 +36,7 @@
 	</properties>
 	
 	<dependencies>
+	
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -42,8 +45,10 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>4.1.0.RELEASE</version>
+			<version>3.0.5.RELEASE</version>
 		</dependency>
+	
+		
 		<dependency>
 			<groupId>com.mchange</groupId>
 			<artifactId>c3p0</artifactId>
@@ -54,6 +59,7 @@
 			<artifactId>ojdbc6</artifactId>
 			<version>11.1.0.7.0</version>
 		</dependency>
+		
 		<!-- Spring and Transactions -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -65,6 +71,7 @@
 			<artifactId>spring-tx</artifactId>
 			<version>${spring-framework.version}</version>
 		</dependency>
+ 
 
 		<!-- Logging with SLF4J & LogBack -->
 		<dependency>
@@ -89,12 +96,15 @@
 
 		
 		<!-- Test Artifacts -->
+				
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${spring-framework.version}</version>
 			<scope>test</scope>
 		</dependency>
+		
+		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

@@ -9,4 +9,9 @@
 		<property name="user" value="scott"/>
 		<property name="password" value="tiger" />		
 	</bean>
+	
+	<bean id="memberDao" class="spring.MemberDao">
+		<constructor-arg ref="dataSource"/>
+	</bean>
+	
 </beans>
